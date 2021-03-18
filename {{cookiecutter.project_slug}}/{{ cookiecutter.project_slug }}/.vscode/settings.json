@@ -1,0 +1,12 @@
+{
+  "python.formatting.provider": "black",
+  "python.pythonPath": ".venv/bin/python",
+  "python.autoComplete.extraPaths": [
+    "{{ cookiecutter.project_slug }}",
+    "{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}"
+  ],
+  "python.analysis.extraPaths": [
+    "{{ cookiecutter.project_slug }}",
+    "{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}"
+  ]
+}

@@ -1,0 +1,45 @@
+site_name: {{ cookiecutter.github_username }} | {{ cookiecutter.project_name }}
+repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+repo_name: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+
+plugins:
+  - search
+  - mkdocstrings
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/git-alt
+    logo: fontawesome/regular/folder-open
+  features:
+    - navigation.instant
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - codehilite
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/{{ cookiecutter.github_username }}/wiki
+
+extra_css:
+  - stylesheets/custom.css
+
+nav:
+  - Getting Started:
+      - About: "getting-started/index.md"
+      - Changelog: "getting-started/changelog.md"
+  - Code:
+      - Schema: code/schema.md
