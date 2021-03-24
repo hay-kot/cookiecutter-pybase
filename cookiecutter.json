@@ -7,6 +7,16 @@
     "project_short_description": "A short description of the project",
     "release_date": "{% now 'local' %}",
     "version": "v0.1.0",
+    "use_typer_cli": "y",
+    "use_rich": "y",
+    "open_source_license": [
+        "MIT license",
+        "BSD license",
+        "ISC license",
+        "Apache Software License 2.0",
+        "GNU General Public License v3",
+        "Not open source"
+    ],
     "_extensions": [
         "jinja2_time.TimeExtension"
     ],

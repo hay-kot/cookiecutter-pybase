@@ -2,11 +2,11 @@ import logging
 from pathlib import Path
 
 import coloredlogs
-from core.config import BASE_DIR
+from {{cookiecutter.project_slug}}.core.settings import settings
 
 LOGGER_LEVEL = "INFO"
 CWD = Path(__file__).parent
-LOGGER_FILE = BASE_DIR.joinpath("{{ cookiecutter.project_slug }}.log")
+LOGGER_FILE = settings.BASE_DIR.joinpath("{{ cookiecutter.project_slug }}.log")
 
 
 logging.basicConfig(
