@@ -3,22 +3,26 @@ name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
 authors = ["{{ cookiecutter.github_username }} <{{ cookiecutter.github_username }}@pm.me>"]
+readme = "README.md"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 pydantic = "^1.8.1"
 coloredlogs = "^15.0"
-
-[tool.poetry.dev-dependencies]
-black = "^20.8b1"
-pylint = "^2.7.2"
-mkdocs-material = "^7.0.6"
-mkdocstrings = "^0.15.0"
-pytest = "6.2.2"
 {% if cookiecutter.use_typer_cli|lower == 'y' %}
 typer = "0.3.2"{%- endif %}
 {% if cookiecutter.use_rich|lower == 'y' %}
 rich = "^9.13.0"{%- endif %}
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.9.0"
+pylint = "^2.7.2"
+mkdocs-material = "^7.0.6"
+pytest = "6.2.2"
+pytest-cov = "^2.11.1"
+tox = "^3.23.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

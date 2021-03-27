@@ -22,6 +22,7 @@ class AppSettings(BaseModel):
     # Helpful Paths
     BASE_DIR: Path = CWD.parent
     HOME_DIR: Path = Path.home()
+    APP_DIR: Path = Path.home().joinpath(".{{cookiecutter.project_slug}}")
 
     # Global Verbose for CLIs
     verbose: bool = False

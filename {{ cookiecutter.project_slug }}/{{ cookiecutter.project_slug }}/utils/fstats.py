@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 def sizeof_fmt(size, decimal_places=2):
+    """Returns a human readable representation of file size"""
     for unit in ["B", "kB", "MB", "GB", "TB", "PB"]:
         if size < 1024.0 or unit == "PiB":
             break
@@ -12,10 +13,12 @@ def sizeof_fmt(size, decimal_places=2):
 
 
 def format_time(timestamp):
+    """Returns a formatted timestamp"""
     return datetime.fromtimestamp(timestamp).strftime("%b %d, %Y")
 
 
 def get_days_old(path: Path) -> int:
+    """Given a file system object, returns the number of days old that file is"""
     time_create = datetime.fromtimestamp(int(os.stat(path).st_birthtime))
     time_now = datetime.now()
     difference = time_now - time_create
